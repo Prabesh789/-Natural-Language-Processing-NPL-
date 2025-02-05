@@ -8,7 +8,7 @@ This repository contains Jupyter notebooks that implement various **Natural Lang
 ---
 ## Repository Contents
 
-### 1**NLTK-Based NLP Tasks**
+### **NLTK-Based NLP Tasks**
 **File:** `nlp_tasks_using_nltk.ipynb`
 
 This notebook implements core NLP techniques using **NLTK**, including:
@@ -26,7 +26,7 @@ This notebook implements core NLP techniques using **NLTK**, including:
 
 ---
 
-### 2️**spaCy-Based NLP Tasks**
+### **spaCy-Based NLP Tasks**
 **File:** `nlp_tasks_using_spaCy.ipynb`
 
 This notebook performs the same NLP tasks as above but using **spaCy**, which offers a more optimized and ML-driven approach.
