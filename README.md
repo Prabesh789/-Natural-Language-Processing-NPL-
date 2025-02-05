@@ -1,4 +1,4 @@
-# Natural-Language-Processing-NPL
+# Natural Language Processing (NLP)
 
 ## NLP Tasks Using NLTK & spaCy
 This repository contains Jupyter notebooks that implement various **Natural Language Processing (NLP)** tasks using two different Python libraries:
@@ -6,6 +6,7 @@ This repository contains Jupyter notebooks that implement various **Natural Lang
 - **spaCy**: A modern, optimized NLP library with a robust ML-based pipeline.
 
 ---
+
 ## Repository Contents
 
 ### **NLTK-Based NLP Tasks**
@@ -27,7 +28,7 @@ This notebook implements core NLP techniques using **NLTK**, including:
 ---
 
 ### **spaCy-Based NLP Tasks**
-**File:** `nlp_tasks_using_spaCy.ipynb`
+📄 **File:** `nlp_tasks_using_spaCy.ipynb`
 
 This notebook performs the same NLP tasks as above but using **spaCy**, which offers a more optimized and ML-driven approach.
 
@@ -53,9 +54,31 @@ Implemented tasks:
 | **POS Tagging**      | Uses predefined rules | Context-aware tagging |
 | **Scalability**      | Handles small datasets well | Suitable for large-scale applications |
 
-🔹 **Conclusion:** If we need a **quick rule-based approach**, use **NLTK**. If you need **efficient, scalable, and ML-powered NLP**, use **spaCy**.
+**Conclusion:**  
+- **If you need a quick, rule-based approach**, use **NLTK**.  
+- **If you need efficient, scalable, and ML-powered NLP**, use **spaCy**.  
 
 ---
-## Some Important Notes
-- **Optimized NLP Pipeline**: An optimized NLP pipeline refers to an efficient and structured workflow that processes raw text through multiple NLP techniques while minimizing computational overhead. In modern NLP libraries like spaCy, the pipeline is pre-optimized to run multiple processing steps (e.g., tokenization, lemmatization, named entity recognition) in a single pass over the text, making it faster and memory-efficient compared to traditional methods.
-- In the provided script, spaCy's NLP pipeline is invoked whenever nlp(text) is used in processing steps.
+
+## Understanding the "Optimized NLP Pipeline"
+### **What is an Optimized NLP Pipeline?**
+An **optimized NLP pipeline** is an efficient and structured workflow that processes raw text through multiple **NLP techniques** while minimizing computational overhead.  
+
+### **Why spaCy's Pipeline is Faster?**
+Unlike NLTK, which requires **separate function calls** for each NLP task, **spaCy processes all components in a single pass** over the text. This makes it:
+- **Faster** (Less computational overhead)
+- **More accurate** (Pre-trained ML models)
+- **Scalable** (Handles large datasets efficiently)
+
+### **How is it implemented in spaCy?**
+In the provided script, **spaCy's NLP pipeline** is **invoked whenever `nlp(text)` is used**, applying multiple processing steps at once.
+
+**Example:**
+```python
+import spacy
+nlp = spacy.load("en_core_web_sm")  # Load optimized NLP pipeline
+doc = nlp("Albert Einstein was a theoretical physicist born in Germany.")
+
+# Named Entity Recognition (NER)
+for ent in doc.ents:
+    print(ent.text, ent.label_)
